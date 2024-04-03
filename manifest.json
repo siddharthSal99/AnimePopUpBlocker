@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Website Tab Closer",
+    "version": "1.0",
+    "description": "Automatically closes tabs opened by a specific website.",
+    "permissions": ["tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
